@@ -4,6 +4,47 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Capital Consulting Group — Kenya's Hospital Financial Rescue</title>
+<meta name="description" content="Capital Consulting Group rescues Kenya's struggling private hospitals. We find lost revenue, fix broken systems, and build financial tools — then leave. No dependency. No subscription.">
+<meta name="keywords" content="hospital consulting Kenya, healthcare financial rescue, hospital revenue recovery, NHIF SHA transition, private hospital Kenya, medical facility turnaround, hospital financial management Nairobi">
+<link rel="canonical" href="https://capitalconsulting.co.ke/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Capital Consulting Group — Kenya's Hospital Financial Rescue">
+<meta property="og:description" content="We find the money your hospital is losing, fix the systems that lose it, and leave. Average engagement: 4–6 weeks.">
+<meta property="og:url" content="https://capitalconsulting.co.ke/">
+<meta property="og:site_name" content="Capital Consulting Group">
+<meta property="og:locale" content="en_KE">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Capital Consulting Group — Kenya's Hospital Financial Rescue">
+<meta name="twitter:description" content="We find the money your hospital is losing, fix the systems that lose it, and leave. Average engagement: 4–6 weeks.">
+
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ConsultingBusiness",
+  "name": "Capital Consulting Group",
+  "description": "Kenya's hospital financial rescue consultancy. Revenue recovery, margin optimisation, credit structuring, and clinical quality strategy for private hospitals.",
+  "url": "https://capitalconsulting.co.ke",
+  "areaServed": {
+    "@type": "Country",
+    "name": "Kenya"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Nairobi",
+    "addressCountry": "KE"
+  },
+  "serviceType": ["Hospital Financial Consulting", "Revenue Cycle Management", "Healthcare Operations Consulting"],
+  "priceRange": "$$"
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -170,6 +211,33 @@ footer{background:var(--navy);padding:56px 7%;border-top:1px solid rgba(255,255,
 .footer-tagline{font-size:14px;font-style:italic;color:rgba(255,255,255,.15)}
 .footer-copy{font-family:'Montserrat',sans-serif;font-size:7.5px;letter-spacing:.15em;color:rgba(255,255,255,.1);text-transform:uppercase}
 
+/* HAMBURGER MENU */
+.nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px;z-index:200}
+.nav-toggle span{display:block;width:22px;height:1.5px;background:#fff;margin:5px 0;transition:transform .3s,opacity .3s}
+.nav-toggle.active span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.nav-toggle.active span:nth-child(2){opacity:0}
+.nav-toggle.active span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+
+/* WHATSAPP FLOAT */
+.wa-float{position:fixed;bottom:28px;right:28px;z-index:90;width:56px;height:56px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(0,0,0,.25);transition:transform .25s,box-shadow .25s;text-decoration:none}
+.wa-float:hover{transform:scale(1.08);box-shadow:0 6px 24px rgba(0,0,0,.3)}
+.wa-float svg{width:28px;height:28px;fill:#fff}
+
+/* STICKY MOBILE CTA */
+.mobile-cta-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:95;background:rgba(10,22,40,.97);backdrop-filter:blur(12px);padding:12px 7%;border-top:1px solid rgba(212,168,75,.15)}
+.mobile-cta-bar a{display:block;text-align:center;font-family:'Montserrat',sans-serif;font-size:10px;font-weight:500;letter-spacing:.25em;text-transform:uppercase;color:var(--navy);background:var(--gold);padding:14px 24px;text-decoration:none;transition:background .25s}
+.mobile-cta-bar a:hover{background:var(--gold2)}
+
+/* FORM STATES */
+.form-status{font-family:'Montserrat',sans-serif;font-size:12px;letter-spacing:.05em;padding:14px 18px;margin-top:16px;display:none}
+.form-status.success{display:block;background:rgba(46,125,50,.08);color:#2e7d32;border:1px solid rgba(46,125,50,.2)}
+.form-status.error{display:block;background:rgba(183,28,28,.08);color:#b71c1c;border:1px solid rgba(183,28,28,.2)}
+.form-submit:disabled{opacity:.5;cursor:not-allowed}
+
+/* FOCUS STATES */
+.form-input:focus{border-color:var(--gold);outline:none;box-shadow:0 2px 0 0 var(--gold)}
+a:focus-visible,.btn-gold:focus-visible,.btn-ghost:focus-visible,.btn-navy:focus-visible,.nav-cta:focus-visible,.form-submit:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+
 @media(max-width:900px){
   .hero-content{padding:0 7%}
   .svc-row{grid-template-columns:1fr}
@@ -180,8 +248,41 @@ footer{background:var(--navy);padding:56px 7%;border-top:1px solid rgba(255,255,
   .contact{grid-template-columns:1fr;gap:48px}
   .crisis-track{flex-wrap:wrap}
   .crisis-stat{flex:0 0 calc(50% - 1px)}
-  nav .nav-links{display:none}
   .form-row{grid-template-columns:1fr}
+
+  /* Mobile nav */
+  .nav-toggle{display:block}
+  .nav-links{display:none!important;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(10,22,40,.98);backdrop-filter:blur(16px);flex-direction:column;justify-content:center;align-items:center;gap:36px!important;padding:0}
+  .nav-links.open{display:flex!important}
+  .nav-links a{font-size:12px!important;color:rgba(255,255,255,.6)!important;letter-spacing:.35em!important}
+  .nav-links a:hover{color:#fff!important}
+  .nav-cta{margin-top:12px}
+  .mobile-cta-bar{display:block}
+  .wa-float{bottom:80px;right:20px;width:50px;height:50px}
+  .wa-float svg{width:24px;height:24px}
+  footer{padding-bottom:72px}
+}
+
+@media(max-width:600px){
+  .hero-headline{font-size:clamp(32px,8vw,48px)!important}
+  .hero-body{font-size:16px}
+  .hero-actions{flex-direction:column;gap:12px}
+  .hero-actions a{text-align:center}
+  .crisis-stat{flex:0 0 100%}
+  .how-grid{grid-template-columns:1fr}
+  .services{padding:80px 5%}
+  .svc-left{padding:36px 24px}
+  .svc-right{padding:36px 24px}
+  .how{padding:80px 5%}
+  .whom{padding:80px 5%}
+  .contact{padding:80px 5%}
+  .contact-form{padding:36px 24px}
+  .crisis{padding:80px 0}
+  .quote-section{padding:80px 7%}
+  .quote-text{font-size:clamp(22px,6vw,32px)!important}
+  .s-hdg{font-size:clamp(28px,6vw,42px)!important}
+  .footer-inner{flex-direction:column;gap:20px;text-align:center}
+  .footer-left{justify-content:center}
 }
 </style>
 </head>
@@ -193,7 +294,10 @@ footer{background:var(--navy);padding:56px 7%;border-top:1px solid rgba(255,255,
     <span class="nav-slash">/</span>
     <span class="nav-sub"><span>consulting</span><span>group</span></span>
   </a>
-  <ul class="nav-links">
+  <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" role="navigation" aria-label="Main navigation">
     <li><a href="#crisis">The Crisis</a></li>
     <li><a href="#services">Services</a></li>
     <li><a href="#how">Process</a></li>
@@ -380,27 +484,116 @@ footer{background:var(--navy);padding:56px 7%;border-top:1px solid rgba(255,255,
     <p class="contact-body anim">Fifteen minutes. No pitch. We'll ask about your facility and tell you honestly whether we can help.</p>
     <div class="contact-details anim">
       <div class="cd-item"><div class="cd-label">WhatsApp</div><div class="cd-val"><a href="https://wa.me/254700000000">+254 700 000 000</a></div></div>
-      <div class="cd-item"><div class="cd-label">Email</div><div class="cd-val"><a href="/cdn-cgi/l/email-protection#345c5158585b745755445d405558575b5a474158405d5a531a575b1a5f51"><span class="__cf_email__" data-cfemail="a6cec3cacac9e6c5c7d6cfd2c7cac5c9c8d5d3cad2cfc8c188c5c988cdc3">[email&#160;protected]</span></a></div></div>
+      <div class="cd-item"><div class="cd-label">Email</div><div class="cd-val"><a href="mailto:info@capitalconsulting.co.ke">info@capitalconsulting.co.ke</a></div></div>
       <div class="cd-item"><div class="cd-label">Based In</div><div class="cd-val">Nairobi — serving nationwide</div></div>
     </div>
   </div>
   <div class="contact-form anim ad2">
     <div class="cf-title">Request a conversation</div>
     <div class="cf-sub">We respond within 24 hours</div>
-    <form onsubmit="return false">
-      <div class="form-row"><div class="form-group"><label class="form-label">Your Name</label><input type="text" class="form-input" placeholder="Dr."></div><div class="form-group"><label class="form-label">Hospital</label><input type="text" class="form-input" placeholder="Facility name"></div></div>
-      <div class="form-row"><div class="form-group"><label class="form-label">Phone / WhatsApp</label><input type="tel" class="form-input" placeholder="+254"></div><div class="form-group"><label class="form-label">Bed Capacity</label><input type="text" class="form-input" placeholder="Approximate"></div></div>
-      <div class="form-group"><label class="form-label">Biggest challenge right now</label><textarea class="form-input" placeholder="Tell us briefly..."></textarea></div>
+    <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label" for="cf-name">Your Name</label>
+          <input type="text" id="cf-name" name="name" class="form-input" placeholder="Dr." required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="cf-hospital">Hospital</label>
+          <input type="text" id="cf-hospital" name="hospital" class="form-input" placeholder="Facility name" required>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label" for="cf-phone">Phone / WhatsApp</label>
+          <input type="tel" id="cf-phone" name="phone" class="form-input" placeholder="+254" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="cf-beds">Bed Capacity</label>
+          <input type="text" id="cf-beds" name="bed_capacity" class="form-input" placeholder="Approximate">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="cf-challenge">Biggest challenge right now</label>
+        <textarea id="cf-challenge" name="challenge" class="form-input" placeholder="Tell us briefly..."></textarea>
+      </div>
       <button type="submit" class="form-submit">Send Enquiry</button>
+      <div id="form-status" class="form-status"></div>
     </form>
   </div>
 </section>
 
-<footer><div class="footer-inner"><div class="footer-left"><a href="#" class="nav-logo"><span class="nav-cap">CAPITAL</span><span class="nav-slash">/</span><span class="nav-sub"><span>consulting</span><span>group</span></span></a></div><div><div class="footer-tagline"><em>Financial clarity for hospitals that can't afford confusion.</em></div><div class="footer-copy" style="margin-top:6px">© 2026 Capital Consulting Group. All rights reserved.</div></div></div></footer>
+<footer><div class="footer-inner"><div class="footer-left"><a href="#" class="nav-logo"><span class="nav-cap">CAPITAL</span><span class="nav-slash">/</span><span class="nav-sub"><span>consulting</span><span>group</span></span></a></div><div><div class="footer-tagline"><em>Financial clarity for hospitals that can't afford confusion.</em></div><div class="footer-copy" style="margin-top:6px">&copy; 2026 Capital Consulting Group. All rights reserved.</div></div></div></footer>
+
+<!-- WhatsApp Float -->
+<a href="https://wa.me/254700000000?text=Hello%2C%20I%27d%20like%20to%20discuss%20financial%20consulting%20for%20my%20hospital." class="wa-float" aria-label="Chat on WhatsApp" target="_blank" rel="noopener">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- Sticky Mobile CTA -->
+<div class="mobile-cta-bar">
+  <a href="#contact">Book a Conversation</a>
+</div>
 
 <script>
-// NAV
+// NAV SCROLL
 window.addEventListener('scroll',()=>document.querySelector('nav').classList.toggle('scrolled',window.scrollY>40));
+
+// HAMBURGER MENU
+(function(){
+  const toggle=document.querySelector('.nav-toggle');
+  const menu=document.querySelector('.nav-links');
+  if(!toggle||!menu)return;
+  toggle.addEventListener('click',()=>{
+    const open=menu.classList.toggle('open');
+    toggle.classList.toggle('active');
+    toggle.setAttribute('aria-expanded',open);
+    toggle.setAttribute('aria-label',open?'Close menu':'Open menu');
+    document.body.style.overflow=open?'hidden':'';
+  });
+  menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+    menu.classList.remove('open');
+    toggle.classList.remove('active');
+    toggle.setAttribute('aria-expanded','false');
+    document.body.style.overflow='';
+  }));
+})();
+
+// CONTACT FORM — Formspree
+(function(){
+  const form=document.getElementById('contact-form');
+  const status=document.getElementById('form-status');
+  if(!form)return;
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    const btn=form.querySelector('.form-submit');
+    btn.disabled=true;
+    btn.textContent='Sending...';
+    status.className='form-status';
+    status.style.display='none';
+    fetch(form.action,{
+      method:'POST',
+      body:new FormData(form),
+      headers:{'Accept':'application/json'}
+    }).then(r=>{
+      if(r.ok){
+        status.textContent='Thank you. We\'ll be in touch within 24 hours.';
+        status.className='form-status success';
+        form.reset();
+      }else{
+        return r.json().then(d=>{
+          status.textContent=d.errors?d.errors.map(e=>e.message).join(', '):'Something went wrong. Please try again or WhatsApp us directly.';
+          status.className='form-status error';
+        });
+      }
+    }).catch(()=>{
+      status.textContent='Network error. Please try again or WhatsApp us directly.';
+      status.className='form-status error';
+    }).finally(()=>{
+      btn.disabled=false;
+      btn.textContent='Send Enquiry';
+    });
+  });
+})();
 
 // SCROLL ANIMATIONS
 const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');obs.unobserve(e.target)}}),{threshold:.12});
