@@ -516,12 +516,22 @@ a:focus-visible,.btn-gold:focus-visible,.btn-ghost:focus-visible,.btn-navy:focus
       </div>
       <div class="form-row">
         <div class="form-group">
+          <label class="form-label" for="cf-email">Email Address</label>
+          <input type="email" id="cf-email" name="email" class="form-input" placeholder="you@hospital.co.ke" required>
+        </div>
+        <div class="form-group">
           <label class="form-label" for="cf-phone">Phone / WhatsApp</label>
           <input type="tel" id="cf-phone" name="phone" class="form-input" placeholder="+254" required>
         </div>
+      </div>
+      <div class="form-row">
         <div class="form-group">
           <label class="form-label" for="cf-beds">Bed Capacity</label>
           <input type="text" id="cf-beds" name="bed_capacity" class="form-input" placeholder="Approximate">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="cf-revenue">Annual Revenue (KES)</label>
+          <input type="text" id="cf-revenue" name="annual_revenue" class="form-input" placeholder="Approximate">
         </div>
       </div>
       <div class="form-group">
@@ -588,9 +598,8 @@ window.addEventListener('scroll',()=>document.querySelector('nav').classList.tog
       headers:{'Accept':'application/json'}
     }).then(r=>{
       if(r.ok){
-        status.textContent='Thank you. We\'ll be in touch within 24 hours.';
-        status.className='form-status success';
-        form.reset();
+        window.location.href='/thank-you.html';
+        return;
       }else{
         return r.json().then(d=>{
           status.textContent=d.errors?d.errors.map(e=>e.message).join(', '):'Something went wrong. Please try again or WhatsApp us directly.';
