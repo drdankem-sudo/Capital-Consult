@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120">
+  <rect width="120" height="120" fill="#0A1628" rx="12"/>
+  <text x="14" y="78" font-family="Montserrat, Helvetica, Arial, sans-serif" font-weight="600" font-size="52" letter-spacing="2" fill="#FFFFFF">C</text>
+  <text x="52" y="78" font-family="Montserrat, Helvetica, Arial, sans-serif" font-weight="300" font-size="60" fill="#D4A84B">/</text>
+  <text x="74" y="78" font-family="Montserrat, Helvetica, Arial, sans-serif" font-weight="400" font-size="40" fill="#FFFFFF" opacity="0.5">g</text>
+</svg>
